@@ -1,30 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Driving Study (PsychoJS)</title>
-
-  <!-- PsychoJS library: you can change the version if needed -->
-  <script src="https://pavlovia.org/lib/psychojs/psychojs-2022.2.0.js"></script>
-
-  <!-- experiment script -->
-  <script src="DrivingStudy_online.js"></script>
-</head>
-<body>
-  <div id="main" align="center">
-    <h2>Loading the experiment...</h2>
-    <p id="status">Please wait.</p>
-  </div>
-  <script>
-    // Start the experiment when the page loads
-    window.onload = function() {
-      // PsychoJS initialization is done inside DrivingStudy_online.js
-      if (typeof startExperiment === "function") {
-        startExperiment();
-      } else {
-        document.getElementById('status').innerText = 'Error: experiment script not found.';
-      }
-    };
-  </script>
-</body>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>survey [PsychoPy]</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="./lib/psychojs-2025.1.1.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- external libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preloadjs@1.0.1/lib/preloadjs.min.js"></script>
+    <!-- experiment -->
+    <script src="./survey.js" type="module"></script>
+    <!-- legacy browsers -->
+    <script src="./lib/psychojs-2025.1.1.iife.js" nomodule></script>
+    <script src="./survey-legacy-browsers.js" nomodule></script>
+  </body>
 </html>

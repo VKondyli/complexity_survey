@@ -1,0 +1,6 @@
+question,min,max
+"How visually complex was this driving scene? 1 = Very simple, 7 = Extremely complex",1,7
+"How organized or structured did the environment appear? 1 = Very disorganized, 7 = Highly structured",1,7
+"How predictable were the movements and events? 1 = Very unpredictable, 7 = Highly predictable",1,7
+"How cluttered did the scene appear? 1 = Not cluttered, 7 = Extremely cluttered",1,7
+"How dynamic was the motion in this scene? 1 = Static, 7 = Very dynamic",1,7
