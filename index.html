@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Driving Scene Study</title>
-    <!-- Load PsychoJS libraries -->
-    <script src="https://pavlovia.org/lib/core-2023.2.js"></script>
-    <script src="https://pavlovia.org/lib/util-2023.2.js"></script>
-    <script src="https://pavlovia.org/lib/visual-2023.2.js"></script>
-    <script src="https://pavlovia.org/lib/event-2023.2.js"></script>
-    <!-- Your experiment logic -->
-    <script src="experiment.js"></script>
+  <meta charset="UTF-8" />
+  <title>Driving Study (PsychoJS)</title>
+
+  <!-- PsychoJS library: you can change the version if needed -->
+  <script src="https://pavlovia.org/lib/psychojs/psychojs-2022.2.0.js"></script>
+
+  <!-- experiment script -->
+  <script src="DrivingStudy_online.js"></script>
 </head>
 <body>
+  <div id="main" align="center">
+    <h2>Loading the experiment...</h2>
+    <p id="status">Please wait.</p>
+  </div>
+  <script>
+    // Start the experiment when the page loads
+    window.onload = function() {
+      // PsychoJS initialization is done inside DrivingStudy_online.js
+      if (typeof startExperiment === "function") {
+        startExperiment();
+      } else {
+        document.getElementById('status').innerText = 'Error: experiment script not found.';
+      }
+    };
+  </script>
 </body>
 </html>
